@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Sawmill - Just another site</title>
+
+    <!-- font Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- owl css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+<body>
+    <div class="dark-layer" onclick="navToggle()"></div>
+    <!-- responsive nav -->
+    <nav class="mobile-nav">
+        <div class="logo-wrap">
+            <img src="images/logo.png" alt="logo">
+            <a onclick="navToggle()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                </svg>
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <span>home</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Caret Down</title><path d="M98 190.06l139.78 163.12a24 24 0 0036.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62z"/></svg>
+                </a>
+                <ul class="dropdown">
+                    <li><a href="#">Home#1</a></li>
+                    <li><a href="#">Home#2</a></li>
+                    <li><a href="#">Home#3</a></li>
+                    <li><a href="#">Home#4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span>about</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Caret Down</title><path d="M98 190.06l139.78 163.12a24 24 0 0036.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62z"/></svg>
+                </a>
+                <ul class="dropdown">
+                    <li><a href="#about1" onclick="navToggle()">About#1</a></li>
+                    <li><a href="#about2" onclick="navToggle()">About#2</a></li>
+                    <li><a href="#about3" onclick="navToggle()">About#3</a></li>
+                </ul>
+            </li>
+            <li><a href="#pricing" onclick="navToggle()">pricing</a></li>
+            <li><a href="#portfolio" onclick="navToggle()">portfolio</a></li>
+            <li><a href="#blog">blog</a></li>
+            <li><a href="#faq" onclick="navToggle()">FAQ</a></li>
+            <li><a href="#contact" onclick="navToggle()">contact</a></li>
+        </ul>
+        <div class="socialIcon">
+            <a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+            </a>
+            <a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Logo Twitter</title><path d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"/></svg>
+            </a>
+            <a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Logo Linkedin</title><path d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"/></svg>
+            </a>
+        </div>
+    </nav>
+    <!-- header -->
+    <header>
+        <div class="topbar">
+            <div class="cantainer">
+                <div class="col">
+                    <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Call</title><path d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z"/></svg><span>Feel free to contact us</span></p>
+                    <p><a href="#">(111) 770-906-0105</a> or <a href="#">send message</a></p>
+                </div>
+                <div class="col">
+                    <div class="socialIcon">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Logo Twitter</title><path d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"/></svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Logo Linkedin</title><path d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"/></svg>
+                        </a>
+                    </div>
+                    <div class="lang">
+                        <a href="#">
+                            <span>english</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Caret Down</title><path d="M98 190.06l139.78 163.12a24 24 0 0036.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62z"/></svg>
+                        </a>
+                        <ul class="lan-dropdown">
+                            <li><a href="#">Deutcsch</a></li>
+                            <li><a href="#">Francais</a></li>
+                            <li><a href="#">Porttugues</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottombar">
+            <div class="cantainer">
+                <div class="logo-wrap">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a>
+                                <span>home</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Caret Down</title><path d="M98 190.06l139.78 163.12a24 24 0 0036.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62z"/></svg>
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="#">Home#1</a></li>
+                                <li><a href="#">Home#2</a></li>
+                                <li><a href="#">Home#3</a></li>
+                                <li><a href="#">Home#4</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>about</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Caret Down</title><path d="M98 190.06l139.78 163.12a24 24 0 0036.44 0L414 190.06c13.34-15.57 2.28-39.62-18.22-39.62h-279.6c-20.5 0-31.56 24.05-18.18 39.62z"/></svg>
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="#about1">About#1</a></li>
+                                <li><a href="#about2">About#2</a></li>
+                                <li><a href="#about3">About#3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#pricing">pricing</a></li>
+                        <li><a href="#portfolio">portfolio</a></li>
+                        <li><a href="#blog">blog</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-icon">
+                    <a onclick="navToggle()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- hero -->
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="cantainer">
+            <div class="info">
+                <h1>The easiest way to move forward</h1>
+                <h3>Cross-platform mobile services that help you everyday.</h3>
+                <div class="infoBTN">
+                    <a href="#" class="primary">Get started</a>
+                    <a href="#" class="secondary">
+                        <span>Learn more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="info">
+        <div class="cantainer">
+            <div class="col free-delivery">
+                <div class="col-sm">
+                    <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="PL_x5F_Cart_1_"><path d="M441,416c0,13.8-11.2,25-25,25s-25-11.2-25-25s11.2-25,25-25S441,402.2,441,416z"/><path d="M153,416c0,13.8-11.2,25-25,25s-25-11.2-25-25s11.2-25,25-25S153,402.2,153,416z"/><path d="M127.9,96l-11.1-32H64v17h41.7l57.5,213.3c-32.4,11.3-59.9,37.9-65.3,73.1C96,379.1,96,384,96,384h352v-16.7H115.3   c4.7-31.6,38.8-58.1,74.1-62.5s243.3-34.2,243.3-34.2L448,96H127.9z M416,256l-235,33.3c-0.9,0.2-1.8,0.4-2.7,0.6l-44.7-177.3   h297.7L416,256z"/></g></svg>
+                </div>
+                <div class="col-sm">
+                    <p><span>Free delivery</span>With every purchase via the internet</p>
+                </div>
+            </div>
+            <div class="col secure-payment">
+                <div class="col-sm">
+                    <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><path d="M360,224v-72c0-57.4-46.6-104-104-104c-57.5,0-104,46.6-104,104v72H96v240h320V224H360z M168,152c0-48.5,39.5-88,88-88    c48.5,0,88,39.5,88,88v72H168V152z M400,448H112V240h288V448z"/></g><path d="M288,320c0-17.7-14.3-32-32-32s-32,14.3-32,32c0,14.9,10.2,27.4,24,31v41c0,4.4,3.6,8,8,8s8-3.6,8-8v-41   C277.8,347.4,288,334.9,288,320z M256,336c-8.8,0-16-7.2-16-16s7.2-16,16-16s16,7.2,16,16S264.8,336,256,336z"/></g></svg>
+                </div>
+                <div class="col-sm">
+                    <p><span>Secure payment</span>Most trusted online payment system</p>
+                </div>
+            </div>
+            <div class="col easy-returns">
+                <div class="col-sm">
+                    <svg enable-background="new 0 0 512 512" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M226.057,105.557v61.918v19.701l19.701,0.194c136.853,1.321,213.945,62.191,234.025,185.542  c-75.179-86.962-161.868-87-233.821-87.02h-19.905v19.895v61.025L41.634,236.175L226.057,105.557 M245.952,67.07L7.216,236.175  l238.736,169.105v-99.493c95.549,0.039,184.133,4.857,259.048,138.447c0-84.844-14.018-274.387-259.048-276.758V67.07L245.952,67.07  z" fill="#37404D"/></svg>
+                </div>
+                <div class="col-sm">
+                    <p><span>Easy returns</span>Providing friendly product return system</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="m-bottom-zero" id="about1">
+        <div class="heading-cantainer">
+            <h2>Designed for efficient country managment</h2>
+            <p>Under the hood, cactus runs a small local web server for each website you're working on. This makes it possible to bulid your website locally, using modern web technologies, and have the results generated to a collection of flat files</p>
+        </div>
+        <div class="col-lg">
+            <div class="col-md">
+                <div class="col-sm">
+                    <img src="images/description-1.jpg" alt="image">
+                </div>
+                <div class="col-sm">
+                    <div class="col">
+                        <div class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-upload" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
+                                <path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                              </svg>
+                        </div>
+                        <div class="right">
+                            <h2>Personal cloud storage</h2>
+                            <p>Whether it's overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                              </svg>
+                        </div>
+                        <div class="right">
+                            <h2>Easy to use notifications</h2>
+                            <p>Whether it's overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md col-reverse">
+                <div class="col-sm">
+                    <img src="images/description-2.jpg" alt="image">
+                </div>
+                <div class="col-sm">
+                    <div class="col">
+                        <div class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
+                              </svg>
+                        </div>
+                        <div class="right">
+                            <h2>Customizable</h2>
+                            <p>Whether it's overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                              </svg>
+                        </div>
+                        <div class="right">
+                            <h2>Self updating</h2>
+                            <p>Whether it's overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="client-wrap bg-lightGray">
+        <div class="cantainer">
+            <div class="heading-wrap">
+                <h2>Recommended by the leaders</h2>
+            </div>
+            <div class="owl-carousel owl-theme client-carousel">
+                <div class="item"><img src="images/client-1.png" alt="client"></div>
+                <div class="item"><img src="images/client-1.png" alt="client"></div>
+                <div class="item"><img src="images/client-1.png" alt="client"></div>
+                <div class="item"><img src="images/client-1.png" alt="client"></div>
+                <div class="item"><img src="images/client-1.png" alt="client"></div>
+                <div class="item"><img src="images/client-1.png" alt="client"></div>
+                <div class="item"><img src="images/client-1.png" alt="client"></div>
+                <div class="item"><img src="images/client-1.png" alt="client"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-wrap">
+        <div class="cantainer">
+            <div class="heading-wrap">
+                <h2>Casual news from Sawmill</h2>
+                <a href="#">
+                    <span>More stories</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="sawmill-news">
+                <div class="item">
+                    <div class="image-wrap">
+                        <img src="images/header-1-358x239.jpg" alt="image">
+                    </div>
+                    <div class="detail-wrap">
+                        <h4>Soundcloud music</h4>
+                        <p>
+                            Ne duo laudem complectitur, et dicta scripsrit his. Cu maiorum scriptorem sea, sea graecis temporib currentColor
+                        </p>
+                        <div class="col">
+                            <p>September 21, 2016</p>
+                            <a href="#">
+                                <span>Read more</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image-wrap">
+                        <img src="images/description-1-358x239.jpg" alt="image">
+                    </div>
+                    <div class="detail-wrap">
+                        <h4>Watch video</h4>
+                        <p>
+                            Ne duo laudem complectitur, et dicta scripsrit his. Cu maiorum scriptorem sea, sea graecis temporib currentColor
+                        </p>
+                        <div class="col">
+                            <p>September 21, 2016</p>
+                            <a href="#">
+                                <span>Read more</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image-wrap">
+                        <img src="images/download-358x239.jpg" alt="image">
+                    </div>
+                    <div class="detail-wrap">
+                        <h4>Gallery slider</h4>
+                        <p>
+                            Ne duo laudem complectitur, et dicta scripsrit his. Cu maiorum scriptorem sea, sea graecis temporib currentColor
+                        </p>
+                        <div class="col">
+                            <p>September 21, 2016</p>
+                            <a href="#">
+                                <span>Read more</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="freeTrial-wrap bg-logoColor">
+        <div class="cantainer">
+            <div class="col">
+                <svg class="loop-svg" height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M423.3,199.4c-15.9-15.1-37.1-23.4-59.7-23.4c-22.6,0-43.8,8.3-59.7,23.4l-36.2,34.3l11.7,11.2l36.2-34.4   c12.8-12.1,29.8-18.8,47.9-18.8c18.1,0,35.1,6.7,47.9,18.8c26.4,25.1,26.4,65.9,0,90.9c-12.8,12.1-29.8,18.8-47.9,18.8   c-18.1,0-35.1-6.7-47.9-18.8l-107.6-102c-16-15.1-37.2-23.4-59.7-23.4c-22.6,0-43.8,8.3-59.7,23.4c-32.9,31.2-32.9,81.9,0,113.1   c15.9,15.1,37.1,23.4,59.7,23.4c22.6,0,43.8-8.3,59.7-23.4l36.1-34.3l-11.7-11.1l-36.2,34.3c-12.8,12.1-29.8,18.8-47.9,18.8   c-18.1,0-35.1-6.7-47.9-18.8c-26.4-25.1-26.4-65.9,0-90.9c12.8-12.1,29.8-18.8,47.9-18.8c18.1,0,35.1,6.7,47.9,18.8l107.6,102   c16,15.1,37.2,23.4,59.7,23.4c22.6,0,43.8-8.3,59.7-23.4C456.2,281.4,456.2,230.6,423.3,199.4z"/></g></svg>
+                <h3><span>Over 2000</span> companies are already <span>using Sawmill every day</span></h3>
+                <p>Try it Yourself 14 days free. No credit card required</p>
+                <a href="#" class="secondary">
+                    <span>Join now</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="m-bottom-zero discover-more" id="about2">
+        <div class="heading-cantainer">
+            <h2>Designed for efficient country managment</h2>
+            <p>Under the hood, cactus runs a small local web server for each website you're working on. This makes it possible to bulid your website locally, using modern web technologies, and have the results generated to a collection of flat files</p>
+        </div>
+        <div class="col-lg">
+            <div class="col-md">
+                <div class="col-sm">
+                    <img src="images/description-3.png" alt="image">
+                </div>
+                <div class="col-sm">
+                    <div class="col">
+                        <div class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-upload" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
+                                <path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                              </svg>
+                        </div>
+                        <div class="right">
+                            <h2>Personal cloud storage</h2>
+                            <p>Whether it's overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                              </svg>
+                        </div>
+                        <div class="right">
+                            <h2>Easy to use notifications</h2>
+                            <p>Whether it's overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                            <a href="#" class="secondary">
+                                <span>Discover more</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="download-app">
+        <div class="cantainer">
+            <div class="col">
+                <div class="col-sm">
+                    <h5>Get the new mobile apps today.</h5>
+                </div>
+                <div class="col-sm">
+                    <a href="#"><img src="images/applestore.png" alt="store"></a>
+                    <a href="#"><img src="images/googleplay.png" alt="store"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-info" id="about3">
+        <div class="heading-cantainer">
+            <h2>Designed for efficient country managment</h2>
+            <p>Under the hood, cactus runs a small local web server for each website you're working on. This makes it possible to bulid your website locally, using modern web technologies, and have the results generated to a collection of flat files</p>
+        </div>
+        <div class="cantainer">
+            <div class="3col">
+                <div class="col">
+                    <div class="col-sm col-reverse">
+                        <div class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-upload" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
+                                <path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                              </svg>
+                        </div>
+                        <div class="right">
+                            <h2>Personal cloud storage</h2>
+                            <p>Whether it's overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm col-reverse">
+                        <div class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                              </svg>
+                        </div>
+                        <div class="right">
+                            <h2>Easy to use notifications</h2>
+                            <p>Whether it's overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/description-4.jpg" alt="image">
+                </div>
+                <div class="col">
+                    <div class="col-sm">
+                        <div class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-upload" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
+                                <path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                              </svg>
+                        </div>
+                        <div class="right">
+                            <h2>Personal cloud storage</h2>
+                            <p>Whether it's overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                              </svg>
+                        </div>
+                        <div class="right">
+                            <h2>Easy to use notifications</h2>
+                            <p>Whether it's overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-wrap bg-lightGray" id="faq">
+        <div class="heading-cantainer">
+            <h2>Frequently Asked Question</h2>
+        </div>
+        <div class="cantainer">
+            <div class="2col">
+                <div class="col">
+                    <div class="col-sm">
+                        <h4>Is there a free trial?</h4>
+                        <p>Yes, there is a 14 day free trial on all plans! You can also cancel at any time. Your subscription will last until the end of the current monthly billing cycle.</p>
+                    </div>
+                    <div class="col-sm">
+                        <h4>Can I use both Integrations and Warehouses?</h4>
+                        <p>Yes, there is a 14 day free trial on all plans! You can also cancel at any time.</p>
+                    </div>
+                    <div class="col-sm">
+                        <h4>What counts as an API call?</h4>
+                        <p>One call to Segment’s API counts as one API call, even if we send that data to multiple analytics services on your behalf. Things like exception and error tracking don’t count as API calls.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-sm">
+                        <h4>Is there a free trial?</h4>
+                        <p>Yes, there is a 14 day free trial on all plans! You can also cancel at any time. Your subscription will last until the end of the current monthly billing cycle.</p>
+                    </div>
+                    <div class="col-sm">
+                        <h4>Can I use both Integrations and Warehouses?</h4>
+                        <p>Yes, there is a 14 day free trial on all plans! You can also cancel at any time.</p>
+                    </div>
+                    <div class="col-sm">
+                        <h4>What counts as an API call?</h4>
+                        <p>One call to Segment’s API counts as one API call, even if we send that data to multiple analytics services on your behalf. Things like exception and error tracking don’t count as API calls.</p>
+                    </div>
+                </div>
+                <div class="col full-width">
+                    <p>Have more questions? Feel free to <a href="#">contact us</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="portfolio">
+        <div class="heading-cantainer">
+            <h2>Projects we’re worked on</h2>
+            <p>Under the hood, cactus runs a small local web server for each website you're working on. This makes it possible to bulid your website locally, using modern web technologies, and have the results generated to a collection of flat files</p>
+        </div>
+        <div class="cantainer">
+            <div class="3col">
+                <div class="col">
+                    <div class="image-wrap">
+                        <img src="images/download-360x209.jpg" alt="image">
+                    </div>
+                    <div class="detail-wrap">
+                        <h4>Perfect for new Startups</h4>
+                        <p>
+                            website-template
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image-wrap">
+                        <img src="images/portfolio-2-360x207.jpg" alt="image">
+                    </div>
+                    <div class="detail-wrap">
+                        <h4>Complete Portfolio layouts</h4>
+                        <p>
+                            app-design
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image-wrap">
+                        <img src="images/quote-2-360x207.jpg" alt="image">
+                    </div>
+                    <div class="detail-wrap">
+                        <h4>Stunning, minimal e-commerce</h4>
+                        <p>
+                            branding print
+                        </p>
+                    </div>
+                </div>
+                <div class="col full-width">
+                    <p>Check out <a href="#">more projects</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team bg-lightGray">
+        <div class="heading-cantainer">
+            <h2>Creative team</h2>
+            <p>Under the hood, cactus runs a small local web server for each website you're working on. This makes it possible to bulid your website locally, using modern web technologies, and have the results generated to a collection of flat files</p>
+        </div>
+        <div class="cantainer">
+            <div class="3col">
+                <div class="col">
+                    <div class="member-wrap">
+                        <img src="images/team-3-360x360.jpg" alt="team">
+                        <div class="member-details">
+                            <h4>Keenan A. Garcia<span>CEO / Founder</span></h4>
+                            <div class="social-icon">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="member-wrap">
+                    <img src="images/team-1-360x360.jpg" alt="team">
+                    <div class="member-details">
+                        <h4>Keenan A. Garcia<span>Developer</span></h4>
+                        <div class="social-icon">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="member-wrap">
+                    <img src="images/team-3-360x360.jpg" alt="team">
+                    <div class="member-details">
+                        <h4>Keenan A. Garcia<span>CEO / Founder</span></h4>
+                        <div class="social-icon">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="heading-cantainer">
+            <h2>Choose the best subscription for you</h2>
+            <p>Under the hood, Cactus runs a small local web server for each website you're working on.</p>
+        </div>
+        <div class="cantainer">
+            <div class="3col">
+                <div class="col">
+                    <div class="pkg-wrap">
+                    <div class="pkg-title">
+                        <h2>Individual<span>Standalone</span></h2>
+                    </div>
+                    <div class="pkg-pricing">
+                        <h1>$9<span>after the 14 days free trial</span></h1>
+                    </div>
+                    <div class="pkg-plains">
+                        <p>All the awesomeness</p>
+                        <p>Up to 15 projects</p>
+                        <p>Unlimited tasks</p>
+                        <p>Basic Dashboards</p>
+                    </div>
+                    <div class="pkg-subscription">
+                        <a href="#" class="secondary">
+                            <span>Choose</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="col active">
+                    <div class="pkg-wrap">
+                    <div class="pkg-title">
+                        <h2>Business<span>Team</span></h2>
+                    </div>
+                    <div class="pkg-pricing">
+                        <h1>$39<span>after the 14 days free trial</span></h1>
+                    </div>
+                    <div class="pkg-plains">
+                        <p>All the awesomeness</p>
+                        <p>Up to 15 projects</p>
+                        <p>Unlimited tasks</p>
+                        <p>Basic Dashboards</p>
+                    </div>
+                    <div class="pkg-subscription">
+                        <a href="#" class="secondary">
+                            <span>Choose</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="pkg-wrap">
+                    <div class="pkg-title">
+                        <h2>Complex<span>Companies</span></h2>
+                    </div>
+                    <div class="pkg-pricing">
+                        <h1>$99<span>after the 14 days free trial</span></h1>
+                    </div>
+                    <div class="pkg-plains">
+                        <p>All the awesomeness</p>
+                        <p>Up to 15 projects</p>
+                        <p>Unlimited tasks</p>
+                        <p>Basic Dashboards</p>
+                    </div>
+                    <div class="pkg-subscription">
+                        <a href="#" class="secondary">
+                            <span>Choose</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                              </svg>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="free-trial bg-lightGray">
+        <div class="cantainer">
+            <div class="trial">
+                <h2>Start managing your team with a <span>14-days free trial</span></h2>
+                <div class="field-wrap">
+                    <input type="text" placeholder="Your name">
+                    <input type="email" placeholder="E-mail address">
+                    <a href="#">Get free demo</a>
+                </div>
+                <p>Whether it’s overall happiness in a country, the unemployment rate</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="cantainer">
+            <div class="2col">
+                <div class="col">
+                    <h2>Designed for efficient</h2>
+                    <p>Under the hood, Cactus runs a small local web server for each website you're working on.</p>
+                    <p>This makes it possible to build your website locally, using modern web technologies, and have the results generated to a collection of flat files.</p>
+                </div>
+                <div class="col testimonial-fix">
+                    <p class="text">Whether it’s overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard.</p>
+                    <div class="author-detail">
+                        <img src="images/quote-1.jpg" alt="author">
+                        <p class="author">-Robin M. Wilson</p>
+                    </div>
+                </div>
+                <div class="col full-width">
+                    <div class="testimonial-wrap testimonial-carousel owl-carousel owl-theme">
+                        <div class="testimonial">
+                            <div class="star-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </div>
+                            <p class="text">"Whether it’s overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard."</p>
+                            <p class="author">Robin M. Wilson, developer</p>
+                        </div>
+                        <div class="testimonial">
+                            <div class="star-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </div>
+                            <p class="text">"Whether it’s overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard."</p>
+                            <p class="author">Robin M. Wilson, developer</p>
+                        </div>
+                        <div class="testimonial">
+                            <div class="star-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </div>
+                            <p class="text">"Whether it’s overall happiness in a country, the unemployment rate, or the participation rate in the latest polls or e-votes, you can view everything on a powerful, customizable dashboard."</p>
+                            <p class="author">Robin M. Wilson, developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-us bg-lightGray" id="contact">
+        <div class="heading-cantainer">
+            <h2>We’d love to hear from you</h2>
+        </div>
+        <div class="cantainer">
+            <div class="2col">
+                <div class="col contact-info">
+                    <h3>Contact now</h3>
+                    <div class="number">
+                        <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Call</title><path d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z"/></svg> +1 222-333-4444</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Call</title><path d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z"/></svg>  +5 666-777-8888</p>
+                    </div>
+                    <p>We're ready to answer any questions you might have about existing coverage, a new policy, or any other insurance help you need. You can call us at 1-800-541-7858. Or, fill out our information form below and one of our agents will be in touch as soon as possible.</p>
+                </div>
+                <div class="col contact-form">
+                    <div class="field">
+                        <input type="text" placeholder="Your name">
+                    </div>
+                    <div class="field">
+                        <input type="email" placeholder="Your e-mail">
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Your phone (optional)">
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Company name (optional)">
+                    </div>
+                    <div class="field full-size">
+                        <textarea placeholder="Your message"></textarea>
+                        <a href="#">Submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="cantainer">
+            <div class="footer-grid">
+                <div class="col">
+                    <img src="images/logo.png" alt="logo">
+                    <p>The fastest way to chop</p>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Home#1</a></li>
+                        <li><a href="#">Home#2</a></li>
+                        <li><a href="#">Home#3</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#about1">About #1</a></li>
+                        <li><a href="#about2">About #2</a></li>
+                        <li><a href="#about3">About #3</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#faq">Faq</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="cantainer">
+                <div class="col">
+                    <p>Copyright 2016. All rights reserved.</p>
+                </div>
+                <div class="col">
+                    <p><span>Europe: +11 2 33 44 55 66</span><span>US: +11 222 333 444</span><span>hello@yourdomain.com</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- owl js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- script -->
+    <script src="js/script.js"></script>
+    <script>
+        let navToggle = () => {
+            sideNav = document.querySelector(".mobile-nav");
+            layer = document.querySelector(".dark-layer");
+            if(!sideNav.classList.contains("sidebar-active")) {
+                sideNav.classList.add("sidebar-active");
+                layer.style.left = '0%';
+            }
+            else{
+                sideNav.classList.remove("sidebar-active");
+                layer.style.left = '-100%';
+            }
+        }
+    </script>
+</body>
+</html>
