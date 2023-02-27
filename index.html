@@ -939,10 +939,12 @@
             if(!sideNav.classList.contains("sidebar-active")) {
                 sideNav.classList.add("sidebar-active");
                 layer.style.left = '0%';
+                document.querySelector("body").style.overflow = "hidden hidden";
             }
             else{
                 sideNav.classList.remove("sidebar-active");
                 layer.style.left = '-100%';
+                document.querySelector("body").style.overflow = "hidden auto";
             }
         }
     </script>
