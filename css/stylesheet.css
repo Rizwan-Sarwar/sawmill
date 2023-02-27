@@ -25,7 +25,7 @@ body {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 14px;
     color: rgb(119, 119, 119);
-    /* position: relative; */
+    position: relative;
 }
 
 a {
